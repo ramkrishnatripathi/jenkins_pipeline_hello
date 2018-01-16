@@ -6,7 +6,6 @@ node {
    		echo 'Hello World 2'
    }   
    stage("Parallel") {
-       steps {
            parallel (
                "firstTask" : {
                    echo "Executing 1 firstTask.........."
@@ -15,6 +14,5 @@ node {
                   echo "Executing 1 secondTask.........."
                }
            )
-       }
    }
 }
